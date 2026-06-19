@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LMAO Proxy</title>
+
+<style>
+body{
+    margin:0;
+    background:#0f172a;
+    color:white;
+    font-family:Inter,system-ui,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    width:600px;
+    padding:60px;
+    text-align:center;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:30px;
+    backdrop-filter:blur(20px);
+}
+
+h1{
+    font-size:60px;
+    margin:0;
+    background:linear-gradient(90deg,#60a5fa,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+p{
+    opacity:.7;
+    margin-bottom:40px;
+}
+
+button{
+    background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+    border:none;
+    color:white;
+    padding:18px 40px;
+    border-radius:20px;
+    font-size:20px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>LMAO Proxy</h1>
+    <p>Fast • Clean • Totally Not A Proxy™</p>
+
+    <button onclick="download()">
+        Download
+    </button>
+</div>
+
+<script>
+function download(){
+    const a=document.createElement("a");
+    a.href="LMAOProxy.html";
+    a.download="LMAOProxy.html";
+    a.click();
+}
+</script>
+
+</body>
+</html>
