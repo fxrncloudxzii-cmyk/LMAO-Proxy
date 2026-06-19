@@ -63,11 +63,13 @@ button{
 </div>
 
 <script>
-function download(){
-    const a=document.createElement("a");
-    a.href="LMAOProxy.html";
-    a.download="LMAOProxy.html";
+function download() {
+    const a = document.createElement("a");
+    a.href = "./LMAOProxy.html";
+    a.download = "LMAOProxy.html";
+    document.body.appendChild(a);
     a.click();
+    document.body.removeChild(a);
 }
 </script>
 
