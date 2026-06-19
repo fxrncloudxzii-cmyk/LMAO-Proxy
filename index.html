@@ -1,71 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LMAO Proxy Install</title>
+<title>LMAO Proxy</title>
 
 <style>
-body{
+*{
     margin:0;
-    background:#0f172a;
-    color:white;
+    padding:0;
+    box-sizing:border-box;
     font-family:Inter,system-ui,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
 }
 
-.card{
-    width:600px;
-    padding:60px;
+body{
+    min-height:100vh;
+    background:#09090f;
+    color:white;
+    overflow-x:hidden;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#5b7fff33,transparent 35%),
+    radial-gradient(circle at bottom right,#a855f733,transparent 35%);
+}
+
+nav{
+    padding:30px 8%;
+    font-size:28px;
+    font-weight:700;
+}
+
+.hero{
+    padding:100px 8%;
     text-align:center;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:30px;
-    backdrop-filter:blur(20px);
 }
 
 h1{
-    font-size:60px;
-    margin:0;
-    background:linear-gradient(90deg,#60a5fa,#8b5cf6);
+    font-size:80px;
+    background:linear-gradient(90deg,#60a5fa,#a855f7);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 p{
-    opacity:.7;
-    margin-bottom:40px;
+    color:#aaa;
+    margin-top:20px;
+    font-size:20px;
 }
 
 button{
-    background:linear-gradient(90deg,#3b82f6,#8b5cf6);
-    border:none;
-    color:white;
+    margin-top:40px;
     padding:18px 40px;
+    border:none;
     border-radius:20px;
-    font-size:20px;
+    background:linear-gradient(90deg,#3b82f6,#9333ea);
+    color:white;
+    font-size:18px;
     cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:80px 8%;
+}
+
+.card{
+    width:320px;
+    background:#111827;
+    border:1px solid #222;
+    border-radius:25px;
+    padding:25px;
+}
+
+.name{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.quote{
+    color:#aaa;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#666;
 }
 </style>
 </head>
 <body>
 
-<div class="card">
-    <h1>LMAO Proxy</h1>
-    <p>Fast • Clean • Totally Not A Proxy™</p>
+<div class="bg"></div>
 
-    <button onclick="download()">
-        Download
-    </button>
+<nav>
+LMAO Proxy
+</nav>
+
+<section class="hero">
+<h1>Browse Smarter.</h1>
+<p>Lightweight HTML embedder with a sleek interface.</p>
+
+<button onclick="downloadFile()">
+Download Now
+</button>
+</section>
+
+<section class="cards">
+
+<div class="card">
+<div class="name">⭐ Early Tester</div>
+<div class="quote">
+"Simple and clean. Love the UI."
+</div>
 </div>
 
+<div class="card">
+<div class="name">⭐ Demo User</div>
+<div class="quote">
+"Feels surprisingly polished."
+</div>
+</div>
+
+<div class="card">
+<div class="name">⭐ </div>
+<div class="quote">
+"Fast setup and looks modern."
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 LMAO Proxy
+</footer>
+
 <script>
-function download() {
+function downloadFile(){
     const a = document.createElement("a");
-    a.href = "./LMAOProxy.html";
+
+    // CHANGE THIS TO YOUR RAW GITHUB FILE
+    a.href =
+    "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/LMAOProxy.html";
+
     a.download = "LMAOProxy.html";
     document.body.appendChild(a);
     a.click();
